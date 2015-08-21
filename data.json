@@ -1,0 +1,13 @@
+{
+ "name": "test-application",
+ "description": "I test so much stuff",
+ "version": "1.2.3",
+ "author": "Some Dev <some.dev@gmail.biz>",
+ "repo": {
+   "user": "markhuge",
+   "repo": "onepager-default"
+ },
+ "repository": {
+   "url": "git@github.com/somedev/test-app"
+ }
+}
