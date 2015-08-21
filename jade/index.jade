@@ -1,0 +1,40 @@
+doctype html
+html(class='no-js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title= name 
+
+    meta(name='description', content='#{name} - #{description}')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/tomorrow-night.min.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic', rel='stylesheet', type='text/css')
+    if css
+      style= css
+    if js  
+      script(src='#{js}')
+  body
+    .container
+      section.title
+        header
+          h1.title= name
+          h2.description= description
+
+          pre npm install #{name} --save-dev
+          
+          .btn.fork
+            a(href='https://github.com/#{repo.user}/#{repo.repo}') Fork me on Github
+      
+      section.docs
+        if docs
+          span
+            != docs
+      footer      
+        if author
+          p.author Created by 
+            a(href="https://github.com/#{repo.user}") #{author}
+
+    if google
+      script != var _gaq=[['_setAccount','#{google}'],['_trackPageview']]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.src='//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g,s)}(document,'script'));
+
