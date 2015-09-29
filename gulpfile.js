@@ -2,9 +2,15 @@ var gulp = require('gulp'),
     $    = require('gulp-load-plugins')(),
     data = require('./data.json');
 
+var bourbon   = require('node-bourbon').includePaths,
+    neat      = require('node-neat').includePaths,
+    sassPaths = bourbon.concat(neat);
+
 gulp.task('css', function () {
   gulp.src('sass/main.sass')
-    .pipe($.sass())
+    .pipe($.sass({
+      includePaths: sassPaths
+    }))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions']
     }))
@@ -29,7 +35,7 @@ gulp.task('server', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['jade/*.jade'], ['html']);
-  gulp.watch(['sass/**/.sass'], ['css']);
+  gulp.watch(['sass/**/*.sass'], ['css']);
 });
 
 gulp.task('default',[ 'server', 'watch', 'css', 'html' ]);
