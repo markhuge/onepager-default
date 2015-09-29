@@ -7,7 +7,6 @@
     "url": "https://github.com/markhuge/onepager-default/issues"
   },
   "peerDependencies": {
-    "onepager": "^0.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -16,7 +15,9 @@
     "gulp-csscomb": "^3.0.6",
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2"
   },
   "homepage": "https://markhuge.github.io/onepager-default",
   "keywords": [
